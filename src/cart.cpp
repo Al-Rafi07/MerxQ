@@ -72,15 +72,15 @@ void Cart::displayCart() const {
   cout << endl;
   cout << Utils::colorText("╔══════════════════════════════════════════════════"
                            "═════════════╗",
-                           "cyan")
+                           "yellow")
        << endl;
-  cout << Utils::colorText("║", "cyan") << "                    🛒 "
+  cout << Utils::colorText("║", "yellow") << "                    🛒 "
        << Utils::colorText("SHOPPING CART", "white", "", "bold")
-       << "                           " << Utils::colorText("║", "cyan")
+       << "                           " << Utils::colorText("║", "yellow")
        << endl;
   cout << Utils::colorText("╠══════════════════════════════════════════════════"
                            "═════════════╣",
-                           "cyan")
+                           "yellow")
        << endl;
 
   for (const CartItem &item : items) {
@@ -88,7 +88,7 @@ void Cart::displayCart() const {
     priceStr << fixed << setprecision(2) << item.product.getPrice();
     subtotalStr << fixed << setprecision(2) << item.getSubtotal();
 
-    cout << Utils::colorText("║", "cyan") << " "
+    cout << Utils::colorText("║", "yellow") << " "
          << Utils::colorText(item.product.getId(), "yellow") << " | "
          << Utils::colorText(item.product.getName(), "white", "", "bold");
 
@@ -106,18 +106,18 @@ void Cart::displayCart() const {
     for (int i = totalLen; i < 10; i++)
       cout << " ";
 
-    cout << Utils::colorText("║", "cyan") << endl;
+    cout << Utils::colorText("║", "yellow") << endl;
   }
 
   cout << Utils::colorText("╠══════════════════════════════════════════════════"
                            "═════════════╣",
-                           "cyan")
+                           "yellow")
        << endl;
 
   stringstream totalStr;
   totalStr << fixed << setprecision(2) << getTotal();
 
-  cout << Utils::colorText("║", "cyan")
+  cout << Utils::colorText("║", "yellow")
        << "                                    "
        << Utils::colorText("TOTAL: $" + totalStr.str(), "green", "", "bold");
 
@@ -125,10 +125,10 @@ void Cart::displayCart() const {
   for (int i = totalLen; i < 15; i++)
     cout << " ";
 
-  cout << Utils::colorText("║", "cyan") << endl;
+  cout << Utils::colorText("║", "yellow") << endl;
   cout << Utils::colorText("╚══════════════════════════════════════════════════"
                            "═════════════╝",
-                           "cyan")
+                           "yellow")
        << endl;
 }
 
