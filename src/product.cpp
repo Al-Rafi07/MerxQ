@@ -22,20 +22,20 @@ Product::Product(const string &id, const string &name, const string &category,
 
 void Product::displayInfo() const {
   cout << Utils::colorText("┌──────────────────────────────────────────┐",
-                           "cyan")
+                           "yellow")
        << endl;
-  cout << Utils::colorText("│", "cyan") << " "
+  cout << Utils::colorText("│", "yellow") << " "
        << Utils::colorText("📦 " + name, "white", "", "bold") << endl;
   cout << Utils::colorText("├──────────────────────────────────────────┤",
-                           "cyan")
+                           "yellow")
        << endl;
-  cout << Utils::colorText("│", "cyan")
+  cout << Utils::colorText("│", "yellow")
        << " ID:       " << Utils::colorText(id, "yellow") << endl;
-  cout << Utils::colorText("│", "cyan")
-       << " Category: " << Utils::colorText(category, "magenta") << endl;
-  cout << Utils::colorText("│", "cyan") << " Price:    "
+  cout << Utils::colorText("│", "yellow")
+       << " Category: " << Utils::colorText(category, "yellow") << endl;
+  cout << Utils::colorText("│", "yellow") << " Price:    "
        << Utils::colorText("$" + to_string(price), "green", "", "bold") << endl;
-  cout << Utils::colorText("│", "cyan") << " Stock:    ";
+  cout << Utils::colorText("│", "yellow") << " Stock:    ";
 
   if (quantity > 10) {
     cout << Utils::colorText(to_string(quantity) + " units", "green") << endl;
@@ -46,9 +46,9 @@ void Product::displayInfo() const {
     cout << Utils::colorText("Out of Stock!", "red", "", "bold") << endl;
   }
 
-  cout << Utils::colorText("│", "cyan") << " " << description << endl;
+  cout << Utils::colorText("│", "yellow") << " " << description << endl;
   cout << Utils::colorText("└──────────────────────────────────────────┘",
-                           "cyan")
+                           "yellow")
        << endl;
 }
 
@@ -64,7 +64,7 @@ void Product::displayShort() const {
   cout << Utils::colorText(id, "yellow") << " | "
        << Utils::colorText(name, "white", "", "bold") << " | "
        << Utils::colorText("$" + priceStr.str(), "green") << " | "
-       << Utils::colorText(category, "magenta") << " " << stockStatus << endl;
+       << Utils::colorText(category, "yellow") << " " << stockStatus << endl;
 }
 
 // ============================================
@@ -122,4 +122,3 @@ void Product::setQuantity(int newQuantity) {
   }
   quantity = newQuantity;
 }
-
