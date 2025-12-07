@@ -87,5 +87,39 @@ void Product::addStock(int amount) {
   }
   quantity += amount;
 }
+// ============================================
+// SETTERS (with validation)
+// ============================================
 
+void Product::setName(const string &newName) {
+  if (newName.empty()) {
+    throw InvalidInputException("Product name cannot be empty");
+  }
+  name = newName;
+}
+
+void Product::setCategory(const string &newCategory) {
+  if (newCategory.empty()) {
+    throw InvalidInputException("Category cannot be empty");
+  }
+  category = newCategory;
+}
+
+void Product::setDescription(const string &newDescription) {
+  description = newDescription;
+}
+
+void Product::setPrice(double newPrice) {
+  if (newPrice < 0) {
+    throw InvalidInputException("Price cannot be negative");
+  }
+  price = newPrice;
+}
+
+void Product::setQuantity(int newQuantity) {
+  if (newQuantity < 0) {
+    throw InvalidInputException("Quantity cannot be negative");
+  }
+  quantity = newQuantity;
+}
 
