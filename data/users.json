@@ -1,9 +1,20 @@
 [
   {
-    "id": "U001",
-    "name": "Admin",
+    "id": 1,
+    "name": "Super Admin",
     "email": "admin@merxq.com",
     "password": "admin123",
-    "userType": "admin"
+    "role": "admin",
+    "department": "Management",
+    "superAdmin": true
+  },
+  {
+    "id": 2,
+    "name": "Demo Customer",
+    "email": "customer@merxq.com",
+    "password": "pass123",
+    "role": "customer",
+    "address": "123 Main Street, Dhaka",
+    "phone": "01700000001"
   }
 ]
